@@ -1,0 +1,7 @@
+li a{
+    color: blueviolet;
+}
+
+body {
+    background: greenyellow url("images/background.jpg") round right bottom;
+}
