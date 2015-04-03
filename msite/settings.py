@@ -38,6 +38,7 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'polls',
+    'books',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -60,18 +61,20 @@ WSGI_APPLICATION = 'msite.wsgi.application'
 
 DATABASES = {
     'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db0.sqlite3'),
         # 'ENGINE': 'django.db.backends.mysql',
-        'ENGINE': 'mysql.connector.django',
-        'NAME': 'site',
-        'USER': 'swm',
-        'PASSWORD': '1234.com',
-        'HOST': 'mynote',
-        'PORT': '3306',
-        'OPTIONS': {'autocommit': True, },
+        # 'ENGINE': 'mysql.connector.django',
+        # 'NAME': 'site',
+        # 'USER': 'swm',
+        # 'PASSWORD': '1234.com',
+        # 'HOST': 'mynote',
+        # 'PORT': '3306',
+        # 'OPTIONS': {'autocommit': True, },
     },
     'back': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'NAME': os.path.join(BASE_DIR, 'db1.sqlite3'),
     }
 }
 
